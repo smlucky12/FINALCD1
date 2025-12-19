@@ -17,6 +17,29 @@ from pyspark.ml.classification import LogisticRegressionModel
 # Configuración de página
 # ----------------------------
 st.set_page_config(page_title="Dashboard Matrícula", layout="wide")
+import base64
+
+def set_background(image_file):
+    with open(image_file, "rb") as f:
+        encoded = base64.b64encode(f.read()).decode()
+
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/jpg;base64,{encoded}");
+            background-size: cover;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# Aplicar fondo
+set_background("20640609-school-education-seamless-background.jpg")
+
 st.title("Dashboard Matrícula")
 
 
@@ -99,6 +122,7 @@ with tab_docentes:
         mostrar_html(archivos_html["Nivel Educativo"], height=700)
     with row2_col2:
         mostrar_html(archivos_html["Nivel Modalidad"], height=700)
+
 
 
 
