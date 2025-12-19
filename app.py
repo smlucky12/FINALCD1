@@ -60,7 +60,7 @@ def mostrar_html(archivo, height=500, ancho_max=1000):
 # ----------------------------
 # Crear pestañas principales
 # ----------------------------
-tab_dashboard, tab_prediccion, tab_docentes = st.tabs(["Matriculados", "Predicción", "Docentes"])
+tab_dashboard, tab_prediccion, tab_docentes = st.tabs(["Matriculados", "Docentes"])
 
 # ----------------------------
 # Pestaña Dashboard Matriculados
@@ -99,6 +99,7 @@ with tab_docentes:
         mostrar_html(archivos_html["Nivel Educativo"], height=700)
     with row2_col2:
         mostrar_html(archivos_html["Nivel Modalidad"], height=700)
+
 
 
 
