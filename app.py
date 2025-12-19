@@ -1,3 +1,8 @@
+import os
+
+os.environ["JAVA_HOME"] = r"C:\Program Files\Java\jdk-11"
+os.environ["PYSPARK_SUBMIT_ARGS"] = "--driver-memory 4g pyspark-shell"
+
 import streamlit as st
 from pathlib import Path
 import streamlit.components.v1 as components
@@ -181,5 +186,6 @@ with tab_docentes:
         mostrar_html(archivos_html["Nivel Educativo"], height=700)
     with row2_col2:
         mostrar_html(archivos_html["Nivel Modalidad"], height=700)
+
 
 
