@@ -121,7 +121,11 @@ with tab_prediccion:
                 from pyspark.ml.classification import LogisticRegressionModel
 
                 # Inicializar Spark
-                spark = SparkSession.builder.appName("Prediccion_Matricula").getOrCreate()
+                from pyspark.sql import SparkSession
+                spark = SparkSession.builder \
+                .config("spark.driver.memory", "4g") \
+                .config("spark.executor.memory", "4g") \
+                .getOrCreate()
 
                 # Cargar modelo
                 modelo_path = "modelo_logistico_spark"
@@ -177,4 +181,5 @@ with tab_docentes:
         mostrar_html(archivos_html["Nivel Educativo"], height=700)
     with row2_col2:
         mostrar_html(archivos_html["Nivel Modalidad"], height=700)
+
 
