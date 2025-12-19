@@ -169,7 +169,7 @@ with tab_docentes:
     row2_col1, row2_col2 = st.columns(2)
 
     with row1_col1:
-        mostrar_html(archivos_html["Docentes Gestión"], height=500)
+        mostrar_html(archivos_html["Docentes Gestión"], height=600)
     with row1_col2:
         mostrar_html(archivos_html["Area1"], height=500)
 
@@ -177,3 +177,4 @@ with tab_docentes:
         mostrar_html(archivos_html["Nivel Educativo"], height=700)
     with row2_col2:
         mostrar_html(archivos_html["Nivel Modalidad"], height=700)
+
