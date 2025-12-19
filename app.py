@@ -38,7 +38,7 @@ def set_background(image_file):
     )
 
 # Aplicar fondo
-set_background("20640609-school-education-seamless-background.jpg")
+set_background("66521905-education-background-seamless-white-colored-vector-seamless-white-background-in-linear-color.jpg")
 
 st.title("Dashboard Matrícula")
 
@@ -122,6 +122,7 @@ with tab_docentes:
         mostrar_html(archivos_html["Nivel Educativo"], height=700)
     with row2_col2:
         mostrar_html(archivos_html["Nivel Modalidad"], height=700)
+
 
 
 
